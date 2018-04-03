@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.fixed-bottom {
+    bottom: 30px;
+}
+
+.cst-btn {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.cst-div {
+    padding-left: 30px;
+    padding-right: 30px
+}
+
+#title {
+    color: #007bff
+}
