@@ -109,3 +109,47 @@ function terima() {
     data[num].final = true
     last()
 }
+
+$("#tidak").click((e) => {
+    var data = parseData()
+    data["final"] = "Sry guys, coba lagi!"
+    e.preventDefault()
+    $.ajax({
+		url: 'https://www.enformed.io/qr21wx5v',
+        method: 'POST',
+		data: data,
+        dataType: 'json',
+        success: () => {
+            console.log("success")
+        },
+        failed: () => {
+            console.log("failed")
+        }
+    });
+})
+
+$("#terima").click((e) => {
+    var data = parseData()
+    data["final"] = "Mantav Soul!"
+    e.preventDefault()
+    $.ajax({
+		url: 'https://www.enformed.io/qr21wx5v',
+        method: 'POST',
+		data: data,
+        dataType: 'json',
+        success: () => {
+            console.log("success")
+        },
+        failed: () => {
+            console.log("failed")
+        }
+    });
+})
+
+function parseData() {
+    val = {}
+    $.each(data, (index, value) => {
+        val[value.title] = value.answer
+    })
+    return val
+}
