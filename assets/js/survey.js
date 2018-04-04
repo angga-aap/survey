@@ -149,7 +149,7 @@ $("#terima").click((e) => {
 function parseData() {
     val = {}
     $.each(data, (index, value) => {
-        val[value.title] = value.answer
+        val[value.subtitle] = value.answer
     })
     return val
 }
