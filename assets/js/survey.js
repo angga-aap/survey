@@ -125,7 +125,7 @@ $("#tidak").click((e) => {
     data["final"] = "Sry guys, coba lagi!"
     e.preventDefault()
     $.ajax({
-		url: 'https://www.enformed.io/qr21wx5v',
+		url: 'https://www.enformed.io/pjtubqtc',
         method: 'POST',
 		data: data,
         dataType: 'json',
@@ -143,7 +143,7 @@ $("#terima").click((e) => {
     data["final"] = "Mantav Soul!"
     e.preventDefault()
     $.ajax({
-		url: 'https://www.enformed.io/qr21wx5v',
+		url: 'https://www.enformed.io/pjtubqtc',
         method: 'POST',
 		data: data,
         dataType: 'json',
