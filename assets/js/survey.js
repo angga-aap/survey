@@ -8,14 +8,16 @@ function initialize() {
 }
 
 function yes() {
-    answer()
-    increase()
-    var num = get_num()
-    $("#title").text(data[num].title)
-    $("#subtitle").text(data[num].subtitle)
-    $("#label").text(data[num].label)
-    clear()
-    change_button()
+    if(answer())
+    {
+        increase()
+        var num = get_num()
+        $("#title").text(data[num].title)
+        $("#subtitle").text(data[num].subtitle)
+        $("#label").text(data[num].label)
+        clear()
+        change_button()
+    }
 }
 
 function no() {
@@ -55,7 +57,15 @@ function clear() {
 }
 
 function answer() {
-    data[get_num()].answer = $("#answer").val()
+    if ($("#answer").val() == "")
+    {
+        alert("Please insert data")
+        return false
+    }
+    else {
+        data[get_num()].answer = $("#answer").val()
+        return true
+    }
 }
 
 function change_button() {
